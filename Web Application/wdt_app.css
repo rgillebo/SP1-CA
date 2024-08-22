@@ -1,0 +1,330 @@
+/* Global style for body and paragraphs */
+body, p {
+  font-family: Calibri, sans-serif;
+  color: #212529;
+}
+
+/* Navbar styles */
+.navbar {
+  position: sticky;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #0E8EA8;
+  color: #fff;
+  width: 15%;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Consolas;
+}
+
+/* Style for each tab in the Navbar */
+.tab {
+  flex: 1; 
+  height: 100%; 
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  border-right: 1px solid #fff; 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+  position: relative;
+}
+
+/* Remove border from the last tab */
+.tab:last-child {
+  border-right: none;
+}
+
+/* Style for the 'Orders' item */
+.right {
+  flex: 0 1 auto;
+  padding: 0 10px;
+}
+
+/* Style for the 'Dashboard' item */
+.left {
+  font-weight: bold;
+}
+ 
+.left:hover {
+ color: #66bdcee8 
+}
+
+/* Dropdown Menu Styles within Navbar */
+.navbar .navbar-dropdown  {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 2px;
+  z-index: 1;
+  left: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+  top: 100%;
+  margin-top: auto;
+}
+
+/* Hover effect for dropdown items */
+.navbar .inventory:hover .navbar-dropdown,
+.navbar .orders:hover .navbar-dropdown {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Style for each dropdown item */
+.navbar .navbar-dropdown .navbar-dropdown-item {
+  padding: 5px;
+  text-decoration: none;
+  display: block;
+  background-color: #83D1E1;
+  color: #212529;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+/* Hover effect for dropdown items */
+.navbar .navbar-dropdown .navbar-dropdown-item:hover {
+  color: #f1f1f1;
+  background-color: #83D1E1;
+}
+
+/* Container for tables and buttons */
+.table-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #212529;
+  border-radius: 5px;
+  margin: 20px auto;
+  width: 60%;
+  box-sizing: border-box;
+  padding-bottom: 50px;
+  overflow: auto;
+}
+
+/* Company Logo Style */
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  max-width: 120px;
+  height: auto;
+}
+
+/* Table Styles */
+#staffTable h1,
+#staffTable h2,
+#deliveryDriverTable h2,
+#deliverytrackingTable h2 {
+  text-align: center;
+}
+
+/* General Table Styles */
+table {
+  border: 1px solid #212529;
+  border-spacing: 0;
+  margin: 20px auto;
+  width: 95%;
+  table-layout: auto;
+}
+
+/* Specific Table Styles */
+#staffTable, #deliveryDriverTable, #deliverytrackingTable {
+  width: 100%;
+  table-layout: fixed;
+}
+
+#deliveryDriverTable, #deliverytrackingTable {
+  margin-top: 40px;
+}
+
+#staffTable table tr:hover td,
+#deliverytrackingTable table tr:hover td {
+  background-color: #66bdcee0;
+  cursor: pointer;
+}
+
+#staffTable table tr.selected td,
+#deliverytrackingTable table tr.selected td {
+  background-color: #4cbe53;
+  font-weight: bold;
+}
+
+/* General style for table headers and cells */
+th, td {
+  border: 1px solid #212529;
+  padding: 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Specific style for table headers */
+th {
+  background-color: #0E8EA8;
+  color: #fff;
+  font-family: Consolas;
+  padding: 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Specific style for table cells */
+td {
+  font-family: Calibri, sans-serif;
+  background-color: #83D1E1;
+  padding: 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* General Button Styles */
+#staff-out,
+#staff-in,
+#addDelivery,
+#clearDelivery {
+  font-family: Consolas;
+  width: 80px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  position: absolute;
+  transition: transform 0.3s easy;
+}
+
+/* Hover effect for buttons */
+#staff-out:hover, 
+#staff-in:hover,
+#addDelivery:hover,
+#clearDelivery:hover {
+  transform: scale(1.15); 
+  transition: transform 0.3s ease;
+}
+
+/* Specific Button Color Styles */
+#staff-out {
+  background-color: #dc3545;
+  color: #fff;
+  right: 90.5%;
+}
+
+#staff-in {
+  background-color: #198754;
+  color: #fff;
+  left: 90.5%;
+}
+
+#addDelivery, #clearDelivery {
+  background-color: #198754;
+  color: #fff;
+  left: 90.5%;
+}
+
+#clearDelivery {
+  background-color: #dc3545;
+}
+
+/* Custom styles for Swal toast */
+.custom-toast-popup {
+  color: #212529; 
+  font-family: Arial, sans-serif; 
+  padding: 0;
+}
+
+.custom-toast-title {
+  color: #dc3545;
+  position: relative; 
+  padding-bottom: 8px; 
+  margin-bottom: 8px; 
+}
+
+.custom-toast-title::after {
+  content: ''; 
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  bottom: -8px; 
+  border-bottom: 1px solid #ddd; 
+}
+
+/* Custom styling for the close button and bell icon in Swal toast */
+.custom-toast-close-button {
+  position: absolute;
+  top: 2px;
+  right: 15px;
+  color: #575656;
+  font-size: 1.25rem; 
+}
+
+.swal2-toast .bi-bell-fill {
+  position: absolute;
+  right: 60px; 
+  top: 24px; 
+  font-size: 1rem; 
+  color: #575656; 
+}
+
+.swal2-toast {
+  right: 10px;
+}
+
+/* Custom styling for text and layout in Swal toast */
+.toast-line {
+  margin-bottom: 5px;
+}
+
+.toast-line-strong {
+  margin-top: 20px;
+}
+
+.toast-flex {
+  display: flex;
+  align-items: center; 
+  margin-bottom: 5px; 
+}
+
+.toast-flex img {
+  margin-right: 10px; 
+}
+
+/* Clock Style */
+.clock {
+  position: fixed;
+  bottom: 1px; 
+  right: 1px; 
+  color: #333;
+  font-size: 1vw; 
+  padding: 5px; 
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .clock {
+      font-size: 3vw; 
+  }
+
+  .navbar {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .tab {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid white;
+  }
+
+  .tab:last-child {
+      border-bottom: none;
+  }
+}
+
